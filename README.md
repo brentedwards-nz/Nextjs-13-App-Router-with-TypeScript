@@ -9,6 +9,33 @@ Use next js
 - Has server and client side rendering
 - Better for SEO some page content rendered from the server
 
+SSR - Server Side Rendering
+- Components are server by default
+
+- Advantages
+  - Smaller Bundles
+  - Less memory usage on client
+  - SEO 
+  - More secure e.g. api keys can be isolated to the server
+
+- Disadvantages 
+  - Cannot listen to browser events
+    - click, change, submit
+  - No access to browser apis
+    - e.g. local storage
+  - Cannot maintain state
+  - Cannot use effects
+
+Runtime Error produced when using client side apis on server side coponents
+
+```
+Unhandled Runtime Error
+Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function} children=...>
+                  ^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+```
+
 Create next js app
 
 `npx create-next-app@<version> <app-name>`
